@@ -1,4 +1,4 @@
-export const baseUrl = "https://fluffypiranha.one/rainydays/wp-json/wc/v3/products";
+export const baseUrl = "https://rainydays.ajbarrett.tech/wp-json/wc/v3/products";
 export const keys = "?consumer_key=ck_c8a0d358f632fe5216b5c5a6e74f66cc906a3deb&consumer_secret=cs_5664fa81e9a949e8fc8d630a6c2acb973d6f5c00";
 export const increaseResults = "&per_page=100";
 export const featuredQuery = "&featured=true";
@@ -33,7 +33,6 @@ export const securityCodeError = document.querySelector("#error-security-code");
 export const month = document.querySelector("#expiration-date-month");
 export const year = document.querySelector("#expiration-date-year");
 export const dateError = document.querySelector("#error-date");
-
 
 // session storage get requests for payment details
 export const detailsSessionStorage = window.sessionStorage.getItem("Payment Details");
