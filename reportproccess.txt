@@ -1,0 +1,75 @@
+Project style tile info
+
+Colours:
+Dark Blue #001e44
+Light Blue #1d5ecc
+CTA Orange #db7c00
+CTA Green #1BC2A3
+Grey #ABABAB
+
+Font Sizes:
+10px = 0.625rem
+12px = 0.75rem      captions sorting
+14px = 0.875rem 
+16px = 1rem         (base) regular (400) - body, medium (500) - subhead 2
+18px = 1.125rem     medium (500)- buttons + subhead 1
+20px = 1.25rem      medium (500)- page header
+24px = 1.5rem       medium (500)- home pic caption text
+30px = 1.875rem
+32px = 2rem         regular (400) - picture headers
+
+https://fonts.google.com/specimen/Roboto
+
+screen size considerations
+https://gs.statcounter.com/screen-resolution-stats
+https://gs.statcounter.com/screen-resolution-stats/mobile/worldwide
+mobile smallest screen has 320 px with 1.16% make functional to 360 and ass a little media queries to adjust after the fact to get smaller.
+
+
+css
+considering size of css file, decided to have a general style sheet with all the reusable styles and navigation and footer styles, and then a css for each page to make fixing problems easier and avoid conflicts
+
+
+hover tool tip;
+https://www.youtube.com/watch?v=xoRbkm8XgfQ&t
+
+grids;
+products grid on home couldn't be reused on products as I wanted 1/2/3 not 1/2/4 because of filter.
+
+reused two column grid across pages
+
+product item setup reused on home, product and products pages
+
+
+Useful sites
+
+grid guide:
+https://css-tricks.com/snippets/css/complete-guide-grid/
+
+flex guide:
+
+tool-tip
+https://www.youtube.com/watch?v=xoRbkm8XgfQ&t=207s
+
+responsive nav:
+
+drop down menu in css 
+https://scrimba.com/scrim/cmpqV6Ta?a=8291.7.1.L9_100 
+    Careful when using with grids and flex box containers as it increases the size
+    of the container with the check box and will probably mess up the nav bar spacing.
+    Use a list and flex the ul specifically.
+
+hover functionality for menus
+https://css-tricks.com/solved-with-css-dropdown-menus/
+
+
+mimicked interactions
+login page, cart, details, products page and product page.
+
+ Website testing 
+
+Lambdatest, https://www.lambdatest.com/ 
+
+Am I responsive design, http://ami.responsivedesign.is/# 
+
+Browser Stack, www.browserstack.com 

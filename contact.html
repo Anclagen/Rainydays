@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Alexander Barrett" />
+    <title>Rainydays | Contact Us</title>
+    <meta name="description" content="Contact us here at Rainydays, by phone, mail, or query form." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/pages/contacts.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/contact.js" type="module" defer></script>
+    <!-- Hotjar Tracking Code for https://a-j-barrett.netlify.app/ -->
+    <script>
+      (function (h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function () {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 2855898, hjsv: 6 };
+        a = o.getElementsByTagName("head")[0];
+        r = o.createElement("script");
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+    </script>
+  </head>
+  <body>
+    <header>
+      <div id="skip"><a href="#main-content">Skip to Main Content</a></div>
+      <nav>
+        <ul class="main-nav-container page-wrapper">
+          <!-- menu drop down-->
+          <li class="main-nav-menu">
+            <label class="hamburger-label" for="menu-drop-down">
+              <img src="images/interface_and_logo/menu_icon_1@2x.png" alt="Menu drop down" class="navigation-icons mobile-screen" />
+            </label>
+            <input type="checkbox" id="menu-drop-down" />
+            <ul class="hamburger main-nav-menu">
+              <li><a href="index.html">Home</a></li>
+              <li class="sale-products"><a href="products.html?on_sale=true">Sale</a></li>
+              <li class="mens-products"><a href="products.html?sex=men">Men</a></li>
+              <li class="womens-products"><a href="products.html?sex=women">Women</a></li>
+              <li id="current"><a href="contact.html">Contact Us</a></li>
+              <li><a href="about.html">About Us</a></li>
+            </ul>
+          </li>
+          <!-- search drop down-->
+          <li class="main-nav-search">
+            <label class="search-label" for="search-drop-down">
+              <img src="images/interface_and_logo/search_icon_1@2x.png" alt="Search" class="navigation-icons mobile-screen" />
+            </label>
+            <input type="checkbox" id="search-drop-down" />
+            <ul class="search main-nav-search">
+              <li>
+                <form id="search-form">
+                  <div class="input-container search-drop">
+                    <input type="search" name="search" class="search-bar" />
+                    <input type="submit" value="search" class="search-button" />
+                  </div>
+                </form>
+              </li>
+            </ul>
+          </li>
+          <!--Logo-->
+          <li class="main-nav-logo">
+            <a href="index.html">
+              <img src="images/interface_and_logo/RainyDays_Logo_white_mobile.png" alt="Rainydays Logo" class="logo_mobile mobile-screen" />
+              <img src="images/interface_and_logo/RainyDays_Logo_white.png" alt="Rainydays Logo" class="desktop-logo" />
+            </a>
+          </li>
+          <!--Cart-->
+          <li class="main-nav-cart">
+            <a href="cart.html" id="cart">
+              <img src="images/interface_and_logo/empty_cart_icon_1@2x.png" alt="Cart Empty" class="navigation-icons" />
+              <span class="desktop-nav">Cart</span>
+            </a>
+          </li>
+          <li class="main-nav-account">
+            <a href="account.html">
+              <img src="images/interface_and_logo/account_icon_1@2x.png" alt="Account" class="navigation-icons" />
+              <span class="desktop-nav">Account</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="page-wrapper">
+      <div class="page-bread-crumbs">
+        <a onclick="history.back()">&#60; previous page</a>
+      </div>
+      <h1 id="main-content">Contact Us</h1>
+      <div class="two-column-grid">
+        <section class="contact-details">
+          <h2>Returns</h2>
+          <p>
+            Returns can be found by logging into your account
+            <a href="account.html">here</a>
+            or by entering your order number
+            <a href="#">here</a>
+            if you didn't make an account when you ordered. If you have other questions you can contact us by phone, mail, or complete a query form.
+          </p>
+          <h2>Questions About Orders</h2>
+          <p>
+            Questions about orders can be found in are
+            <a href="#">FAQ</a>
+            , if you have other questions you can contact us by phone, mail, or complete a query form.
+          </p>
+          <h2>Phone Us</h2>
+          <p>Monday to Friday 8:00am - 6:00pm</p>
+          <p>Saturday to Sunday 9:00am - 5:00pm</p>
+          <p>UK phone: 47 47 47 47</p>
+          <p>International phone: +44 47 47 47 47</p>
+          <h2>Write To Us</h2>
+          <p>Write to us at:</p>
+          <address>
+            Rainydays 47
+            <br />
+            Rainy Days Street
+            <br />
+            London
+            <br />
+            SF6 795
+          </address>
+        </section>
+        <section class="contact-form">
+          <h2>Query Form</h2>
+          <div class="success"></div>
+          <form id="contact-form" action="#" method="POST" novalidate>
+            <!--empty to avoid blank page-->
+            <label for="fullname">Name*</label>
+            <input type="text" id="fullname" name="name" />
+            <div class="error" id="error-name"></div>
+            <label for="email">E-mail*</label>
+            <input type="email" id="email" name="email" />
+            <div class="error" id="error-email"></div>
+            <label for="subject">Subject*</label>
+            <input type="text" id="subject" name="subject" />
+            <div class="error" id="error-subject"></div>
+            <label for="message">Message*</label>
+            <textarea id="message" name="message"></textarea>
+            <div class="error" id="error-message"></div>
+            <label for="order-number">
+              Order Number
+              <span data-tool-tip="12 digit number emailed to you.">?</span>
+            </label>
+            <input type="number" id="order-number" name="order-number" />
+            <div class="error" id="error-order-number"></div>
+            <input type="submit" value="Submit" class="cta" />
+          </form>
+          <p>
+            All queries are be subject to are
+            <a href="#">privacy policy</a>
+            .
+          </p>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <section class="foot-top">
+        <div class="two-column-grid page-wrapper">
+          <div class="sign-up-container">
+            <form class="sign-up">
+              <label for="signup-email">Sign Up To Our Newsletter</label>
+              <div class="input-container">
+                <input type="email" name="signup-email" id="signup-email" class="email-input" />
+                <input type="submit" value="Submit" class="submit-button" />
+              </div>
+            </form>
+          </div>
+          <div>
+            <h2>Connect With Us On Social Media</h2>
+            <div class="footer-icon-flexbox">
+              <img src="images/interface_and_logo/icons/Icon-awesome-facebook.png" alt="Facebook Icon" />
+              <img src="images/interface_and_logo/icons/Icon-awesome-twitter.png" alt="Twitter Icon" />
+              <img src="images/interface_and_logo/icons/Icon-awesome-instagram.png" alt="Instagram Icon" />
+              <img src="images/interface_and_logo/icons/Icon-awesome-youtube.png" alt="Youtube Icon" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="foot-bot">
+        <div class="two-column-grid page-wrapper">
+          <div>
+            <a href="about.html" class="">About Us</a>
+            <a href="contact.html" class="">Contact Us</a>
+          </div>
+          <div class="payment-icons">
+            <h2>Accepted Payments</h2>
+            <div class="footer-icon-flexbox">
+              <img src="images/interface_and_logo/icons/mastercard_logo_1x.png" alt="Mastercard Logo" />
+              <img src="images/interface_and_logo/icons/maestro_logo_1x.png" alt="Maestro Logo" />
+              <img src="images/interface_and_logo/icons/visa_logo_1x.png" alt="Visa Logo" />
+              <img src="images/interface_and_logo/icons/american_express_logo_1x.png" alt="American Express Logo" />
+              <img src="images/interface_and_logo/icons/pay_pal_logo.png" alt="Pay Pal Logo" />
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <span>Rainydays Copyright &copy; 2021</span>
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>

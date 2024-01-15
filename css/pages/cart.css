@@ -1,0 +1,107 @@
+div.cart-product-item-grid img {
+  width: 100%;
+}
+
+hr {
+  margin: 40px 0px;
+}
+
+.radio-delivery-type {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+section h2 {
+  font-size: 1.2rem;
+  margin-top: 0;
+}
+
+section.payment-summary span {
+  float: right;
+}
+
+.total-price {
+  font-weight: 600;
+}
+
+section.payment-summary a.cta-green {
+  margin-top: 0;
+}
+
+section.payment-summary {
+  margin-top: 20px;
+}
+
+.plus-button {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.minus-button {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.plus-button:disabled
+.minus-button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.remove-button {
+  color: var(--dark-blue);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+input[type="number"] {
+  max-width: 10px;
+  padding: 5px 8px;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+input[type="submit"]:disabled {
+  background-color: grey;
+  border-color: grey;
+  opacity: 0.3;
+}
+
+.cart-product-item-grid {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  margin-bottom: -1px;
+  gap: 10px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.cart-product-item-grid div img {
+  margin-top: 30px;
+}
+
+.cart-product-item-grid div h2,
+.cart-product-item-grid div p {
+  margin: 5px 0;
+}
+
+.remove-button {
+  border: none;
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 10px;
+  margin-top: -30px;
+  float: right;
+}
+
+@media only screen and (min-width: 700px) {
+  section.payment-summary {
+    margin-top: 0px;
+  }
+
+  .last-item-cart-divider {
+    display: none;
+  }
+}

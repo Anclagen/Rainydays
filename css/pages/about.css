@@ -1,0 +1,33 @@
+.logo-image {
+  background: var(--dark-blue);
+  display: block;
+  padding: 10px;
+  margin: 0 auto;
+  text-align: center;
+  width: 90%;
+  max-width: 500px;
+  margin-bottom: 50px;
+}
+
+main img {
+  display: block;
+  width: 100%;
+  max-width: 385px;
+}
+main section {
+  margin-bottom: 50px;
+}
+
+@media only screen and (min-width: 600px) {
+  .about-grid-even {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+  }
+
+  .about-grid-third {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 25px;
+  }
+}

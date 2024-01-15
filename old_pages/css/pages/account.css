@@ -1,0 +1,53 @@
+.login-wrapper {
+  max-width: 1000px;
+  width: 90%;
+  margin: 0px auto;
+}
+
+.login-container > * {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-icon {
+  max-width: 150px;
+  margin: 20px auto;
+}
+
+.cta {
+  margin: 20px 0px;
+}
+
+.login-container input[type="submit"] {
+  margin-top: 50px;
+}
+
+.login {
+  border: 2px solid var(--light-blue);
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 50px;
+}
+
+.signup {
+  background: var(--cta-green);
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 50px;
+}
+
+/*for alt login to bypass cart details pages*/
+.oneclick-wrapper {
+  max-width: 500px;
+  width: 90%;
+  margin: 0px auto;
+}
+
+div.login-container a {
+  text-decoration: none;
+}
+
+.cta {
+  /* width: 100%;*/
+  text-align: center;
+}

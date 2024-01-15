@@ -1,0 +1,171 @@
+.login-wrapper {
+  max-width: 1000px;
+  width: 90%;
+  margin: 0px auto;
+}
+
+hr {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.login-container > * {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-icon {
+  max-width: 150px;
+  margin: 20px auto;
+}
+
+.cta {
+  margin: 20px 0px;
+}
+
+.login-container input[type="submit"] {
+  margin-top: 50px;
+}
+
+.login {
+  border: 2px solid var(--light-blue);
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 50px;
+}
+
+.signup {
+  background: var(--cta-green);
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 50px;
+}
+
+/*for alt login to bypass cart details pages*/
+.oneclick-wrapper {
+  max-width: 500px;
+  width: 90%;
+  margin: 0px auto;
+}
+
+div.login-container a {
+  text-decoration: none;
+}
+
+.cta {
+  /* width: 100%;*/
+  text-align: center;
+}
+
+.cta-green {
+  padding: 5px;
+}
+
+button.cta {
+  margin-top: 10px;
+}
+
+.paragraph {
+  margin: 10px 0 0 0;
+}
+
+.hidden,
+input.hidden {
+  display: none;
+}
+
+.payment-details-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+
+.payment-security-code {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.payment-details-form label {
+  margin: 10px 0 5px 0;
+}
+
+.payment-details-form input {
+  font-size: 1rem;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.remove-margin-bottom {
+  margin-bottom: 0;
+}
+
+.payment-type-select {
+  display: flex;
+  justify-content: space-between;
+}
+
+#expiration-date-month,
+#expiration-date-year {
+  max-width: 1.1rem;
+  margin-right: 0px;
+  margin-bottom: 0px;
+}
+
+#security-code {
+  max-width: 2rem;
+}
+
+.security-expiration-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+div.security-expiration-grid div + label {
+  margin-bottom: 50px;
+}
+
+#first-name,
+#last-name {
+  max-width: 13rem;
+}
+
+#town-city {
+  max-width: 8rem;
+}
+
+#post-code {
+  max-width: 6rem;
+}
+
+#country {
+  max-width: 9rem;
+}
+
+#email,
+#name-card {
+  max-width: 20rem;
+}
+
+#card-number {
+  max-width: 10rem;
+}
+
+table {
+  min-width: 90%;
+  margin: auto;
+}
+
+th {
+  padding-right: 15px;
+  border-bottom: 1px solid black;
+}
+
+tr:nth-child(even) {
+  background-color: #d6eeee;
+}
+
+.total {
+  text-align: right;
+}

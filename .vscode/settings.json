@@ -1,0 +1,6 @@
+{
+  "liveServer.settings.port": 5502,
+  "prettier.htmlWhitespaceSensitivity": "ignore",
+  "cSpell.words": ["Btns", "clickables", "fadein", "fullname", "lightbox", "MMYY", "oneclick", "signup"],
+  "cSpell.ignoreWords": ["mens", "womens"]
+}

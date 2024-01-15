@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Alexander Barrett" />
+    <title>Rainydays | Jackets for all outdoor activities</title>
+    <meta name="description" content="Rainydays sells jackets to suit all outdoor activities and weather conditions keeping you comfortable no matter the situation." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/pages/index.css" />
+    <script src="js/index.js" type="module" defer></script>
+    <!-- Hotjar Tracking Code for https://a-j-barrett.netlify.app/ -->
+    <script>
+      (function (h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function () {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 2855898, hjsv: 6 };
+        a = o.getElementsByTagName("head")[0];
+        r = o.createElement("script");
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+    </script>
+  </head>
+  <body>
+    <header>
+      <div id="skip"><a href="#main-content">Skip to Main Content</a></div>
+      <nav>
+        <ul class="main-nav-container page-wrapper">
+          <!-- menu drop down-->
+          <li class="main-nav-menu">
+            <label class="hamburger-label" for="menu-drop-down">
+              <img src="images/interface_and_logo/menu_icon_1@2x.png" alt="Menu drop down" class="navigation-icons mobile-screen" />
+            </label>
+            <input type="checkbox" id="menu-drop-down" />
+            <ul class="hamburger main-nav-menu">
+              <li id="current"><a href="index.html">Home</a></li>
+              <li class="sale-products"><a href="products.html?on_sale=true">Sale</a></li>
+              <li class="mens-products"><a href="products.html?sex=men">Men</a></li>
+              <li class="womens-products"><a href="products.html?sex=women">Women</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="about.html">About Us</a></li>
+            </ul>
+          </li>
+          <!-- search drop down-->
+          <li class="main-nav-search">
+            <label class="search-label" for="search-drop-down">
+              <img src="images/interface_and_logo/search_icon_1@2x.png" alt="Search" class="navigation-icons mobile-screen" />
+            </label>
+            <input type="checkbox" id="search-drop-down" />
+            <ul class="search main-nav-search">
+              <li>
+                <form id="search-form">
+                  <div class="input-container search-drop">
+                    <input type="search" name="search" class="search-bar" />
+                    <input type="submit" value="search" class="search-button" />
+                  </div>
+                </form>
+              </li>
+            </ul>
+          </li>
+          <!--Logo-->
+          <li class="main-nav-logo">
+            <a href="index.html">
+              <img src="images/interface_and_logo/RainyDays_Logo_white_mobile.png" alt="Rainydays Logo" class="logo_mobile mobile-screen" />
+              <img src="images/interface_and_logo/RainyDays_Logo_white.png" alt="Rainydays Logo" class="desktop-logo" />
+            </a>
+          </li>
+          <!--Cart-->
+          <li class="main-nav-cart">
+            <a href="cart.html" id="cart">
+              <img src="images/interface_and_logo/empty_cart_icon_1@2x.png" alt="Cart Empty" class="navigation-icons" />
+              <span class="desktop-nav">Cart</span>
+            </a>
+          </li>
+          <li class="main-nav-account">
+            <a href="account.html">
+              <img src="images/interface_and_logo/account_icon_1@2x.png" alt="Account" class="navigation-icons" />
+              <span class="desktop-nav">Account</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!-- welcome banner -->
+      <section class="welcome-banner">
+        <div class="page-wrapper">
+          <div class="banner-content">
+            <a href="products.html" class="image-text-links">
+              <h1 id="main-content">Rainydays Spring Sale</h1>
+              <p>Up To 50% Off Selected Jackets</p>
+            </a>
+            <a href="products.html?on_sale=true" class="cta">Browse Sale Items</a>
+          </div>
+        </div>
+      </section>
+      <!-- Quick links to men, women, kids disappear on tablet? and Desktop-->
+      <section class="page-wrapper hide-quick-links">
+        <h2>Browse Our Jackets</h2>
+        <div class="quick-links">
+          <div>
+            <a href="products.html?sex=men">
+              <img src="images/promo_and_home_photos/men_small_square.jpg" alt="Men's Jackets" />
+              <h3>Men</h3>
+            </a>
+          </div>
+          <div>
+            <a href="products.html?sex=women">
+              <img src="images/promo_and_home_photos/women_small_square.jpg" alt="Women's Jackets" />
+              <h3>Women</h3>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!--  Promotional image section  -->
+      <section class="promo-images page-wrapper">
+        <div class="two-column-grid">
+          <div class="promo-images-container">
+            <a href="products.html">
+              <div class="overlay-container">
+                <img src="images/promo_and_home_photos/mountain_climbing_small.jpg" alt="Mountain climbing" class="small-images" />
+                <img src="images/promo_and_home_photos/mountain_climbing_large.jpg" alt="Mountain climbing" class="large-images" />
+
+                <div class="overlay"></div>
+
+                <div class="image-content">
+                  <h2>Mountaineering</h2>
+                  <p>Jackets to suit all extremes</p>
+                </div>
+
+                <div class="image-content-button">
+                  <span class="cta">View More</span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="promo-images-container">
+            <a href="products.html">
+              <div class="overlay-container">
+                <img src="images/promo_and_home_photos/mountain_view_small.jpg" alt="People sitting, with mountain range view" class="small-images" />
+                <img src="images/promo_and_home_photos/mountain_view_large.jpg" alt="People sitting, with mountain range view" class="large-images" />
+                <div class="overlay"></div>
+                <div class="image-content">
+                  <h2>Breathable</h2>
+                  <p>Jackets to take in the great outdoors</p>
+                </div>
+                <div class="image-content-button">
+                  <span class="cta">View More</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="promo-images-container">
+          <a href="products.html">
+            <div class="overlay-container">
+              <img src="images/promo_and_home_photos/scenic_cycling_small.jpg" alt="Cycling through green scenery" class="small-wide-images" />
+              <img src="images/promo_and_home_photos/scenic_cycling_medium.jpg" alt="Cycling through green scenery" class="medium-images" />
+              <img src="images/promo_and_home_photos/scenic_cycling_large.jpg" alt="Cycling through green scenery" class="large-images" />
+              <div class="overlay"></div>
+              <div class="image-content">
+                <h2>Wind and Rain</h2>
+                <p>Water and wind resistant jackets</p>
+              </div>
+              <div class="image-content-button">
+                <span class="cta">View More</span>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="two-column-grid">
+          <div class="promo-images-container">
+            <a href="products.html">
+              <div class="overlay-container">
+                <img src="images/promo_and_home_photos/mountain_sitting_small.jpg" alt="Sitting up high with the mountains" class="small-images" />
+                <img src="images/promo_and_home_photos/mountain_sitting_large.jpg" alt="Sitting up high with the mountains" class="large-images" />
+                <div class="overlay"></div>
+                <div class="image-content">
+                  <h2>Adventure</h2>
+                  <p>Jackets to take you higher</p>
+                </div>
+                <div class="image-content-button">
+                  <span class="cta">View More</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="promo-images-container">
+            <a href="products.html">
+              <div class="overlay-container">
+                <img src="images/promo_and_home_photos/canoe_small.jpg" alt="Canoeing in turquoise waters" class="small-images" />
+                <img src="images/promo_and_home_photos/canoe_large.jpg" alt="Canoeing in turquoise waters" class="large-images" />
+                <div class="overlay"></div>
+                <div class="image-content">
+                  <h2>Canoeing</h2>
+                  <p>Keeping you dry and protected</p>
+                </div>
+                <div class="image-content-button">
+                  <span class="cta">View More</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!--  Best sellers section  -->
+      <section class="featured-products page-wrapper">
+        <h2>Featured Sale Products</h2>
+        <div class="product-list-grid">
+          <!-- JS fills in here -->
+        </div>
+      </section>
+    </main>
+    <footer>
+      <section class="foot-top">
+        <div class="two-column-grid page-wrapper">
+          <div class="sign-up-container">
+            <form class="sign-up">
+              <label for="signup-email">Sign Up To Our Newsletter</label>
+              <div class="input-container">
+                <input type="email" name="signup-email" id="signup-email" class="email-input" />
+                <input type="submit" value="Submit" class="submit-button" />
+              </div>
+            </form>
+          </div>
+          <div>
+            <h2>Connect With Us On Social Media</h2>
+            <div class="footer-icon-flexbox">
+              <img src="images/interface_and_logo/icons/Icon-awesome-facebook.png" alt="Facebook Icon" />
+              <img src="images/interface_and_logo/icons/Icon-awesome-twitter.png" alt="Twitter Icon" />
+              <img src="images/interface_and_logo/icons/Icon-awesome-instagram.png" alt="Instagram Icon" />
+              <img src="images/interface_and_logo/icons/Icon-awesome-youtube.png" alt="Youtube Icon" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="foot-bot">
+        <div class="two-column-grid page-wrapper">
+          <div>
+            <a href="about.html" class="">About Us</a>
+            <a href="contact.html" class="">Contact Us</a>
+          </div>
+          <div class="payment-icons">
+            <h2>Accepted Payments</h2>
+            <div class="footer-icon-flexbox">
+              <img src="images/interface_and_logo/icons/mastercard_logo_1x.png" alt="Mastercard Logo" />
+              <img src="images/interface_and_logo/icons/maestro_logo_1x.png" alt="Maestro Logo" />
+              <img src="images/interface_and_logo/icons/visa_logo_1x.png" alt="Visa Logo" />
+              <img src="images/interface_and_logo/icons/american_express_logo_1x.png" alt="American Express Logo" />
+              <img src="images/interface_and_logo/icons/pay_pal_logo.png" alt="Pay Pal Logo" />
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <span>Rainydays Copyright &copy; 2021</span>
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>

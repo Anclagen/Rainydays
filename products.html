@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Alexander Barrett" />
+    <title>Rainydays | Browse All Jackets</title>
+    <meta name="description" content="Browsing our selection of men's jackets. With jackets for to suit a wide range of outdoor activities" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/pages/products.css" />
+    <script src="js/products.js" type="module" defer></script>
+    <!-- Hotjar Tracking Code for https://a-j-barrett.netlify.app/ -->
+    <script>
+      (function (h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function () {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 2855898, hjsv: 6 };
+        a = o.getElementsByTagName("head")[0];
+        r = o.createElement("script");
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+    </script>
+  </head>
+  <body>
+    <header>
+      <div id="skip"><a href="#main-content">Skip to Main Content</a></div>
+      <nav>
+        <ul class="main-nav-container page-wrapper">
+          <!-- menu drop down-->
+          <li class="main-nav-menu">
+            <label class="hamburger-label" for="menu-drop-down">
+              <img src="images/interface_and_logo/menu_icon_1@2x.png" alt="Menu drop down" class="navigation-icons mobile-screen" />
+            </label>
+            <input type="checkbox" id="menu-drop-down" />
+            <ul class="hamburger main-nav-menu">
+              <li><a href="index.html">Home</a></li>
+              <li class="sale-products"><a href="products.html?on_sale=true">Sale</a></li>
+              <li class="mens-products"><a href="products.html?sex=men">Men</a></li>
+              <li class="womens-products"><a href="products.html?sex=women">Women</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="about.html">About Us</a></li>
+            </ul>
+          </li>
+          <!-- search drop down-->
+          <li class="main-nav-search">
+            <label class="search-label" for="search-drop-down">
+              <img src="images/interface_and_logo/search_icon_1@2x.png" alt="Search" class="navigation-icons mobile-screen" />
+            </label>
+            <input type="checkbox" id="search-drop-down" />
+            <ul class="search main-nav-search">
+              <li>
+                <form id="search-form">
+                  <div class="input-container search-drop">
+                    <input type="search" name="search" class="search-bar" />
+                    <input type="submit" value="search" class="search-button" />
+                  </div>
+                </form>
+              </li>
+            </ul>
+          </li>
+          <!--Logo-->
+          <li class="main-nav-logo">
+            <a href="index.html">
+              <img src="images/interface_and_logo/RainyDays_Logo_white_mobile.png" alt="Rainydays Logo" class="logo_mobile mobile-screen" />
+              <img src="images/interface_and_logo/RainyDays_Logo_white.png" alt="Rainydays Logo" class="desktop-logo" />
+            </a>
+          </li>
+          <!--Cart-->
+          <li class="main-nav-cart">
+            <a href="cart.html" id="cart">
+              <img src="images/interface_and_logo/empty_cart_icon_1@2x.png" alt="Cart Empty" class="navigation-icons" />
+              <span class="desktop-nav">Cart</span>
+            </a>
+          </li>
+          <li class="main-nav-account">
+            <a href="account.html">
+              <img src="images/interface_and_logo/account_icon_1@2x.png" alt="Account" class="navigation-icons" />
+              <span class="desktop-nav">Account</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="page-wrapper">
+      <div class="page-bread-crumbs">
+        <a onclick="history.back()">&#60; previous page</a>
+      </div>
+      <section>
+        <h1>All Jackets</h1>
+        <div class="search-terms-container"></div>
+        <div class="sort-products">
+          <label for="sort">Sort By:</label>
+          <select name="sort" id="sort">
+            <option value="price-low-high">Price; Low-High</option>
+            <option value="price-high-low">Price; High-Low</option>
+            <option value="brand-a-z">Brand A-Z</option>
+            <option value="brand-z-a">Brand Z-A</option>
+          </select>
+        </div>
+        <div class="products-lists-layout">
+          <div class="filter">
+            <label class="filter-label" for="filter-drop-down"><h2>Filter</h2></label>
+            <input type="checkbox" id="filter-drop-down" />
+            <ul class="filter-menu">
+              <li>
+                <ul class="collapsed-section filter-container">
+                  <li class="filter-items"><h3>Category</h3></li>
+                  <li>
+                    <label for="featured">Featured Sale Items</label>
+                    <input type="checkbox" id="featured" name="true" key="featured" />
+                  </li>
+                  <li>
+                    <label for="waterproof">Waterproof Jackets</label>
+                    <input type="checkbox" id="waterproof" name="Waterproof" key="category" />
+                  </li>
+                  <li>
+                    <label for="water-resistant">Water Resistant Jackets</label>
+                    <input type="checkbox" id="water-resistant" name="Water Resistant" key="category" />
+                  </li>
+                  <li>
+                    <label for="hiking">Hiking Jackets</label>
+                    <input type="checkbox" id="hiking" name="Hiking" key="category" />
+                  </li>
+                  <li>
+                    <label for="ski">Ski Jackets</label>
+                    <input type="checkbox" id="ski" name="Ski" key="category" />
+                  </li>
+                  <li>
+                    <label for="casual">Casual Jackets</label>
+                    <input type="checkbox" id="casual" name="Casual" key="category" />
+                  </li>
+                  <li>
+                    <label for="watersports">Water Sports Jackets</label>
+                    <input type="checkbox" id="watersports" name="Watersports" key="category" />
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <ul class="collapsed-section filter-container">
+                  <li class="filter-items"><h3>Brands</h3></li>
+                  <li>
+                    <label for="hail-storm">Hail Storm</label>
+                    <input type="checkbox" id="hail-storm" name="Hail Storm" key="brand" />
+                  </li>
+                  <li>
+                    <label for="harmless">Harmless</label>
+                    <input type="checkbox" id="harmless" name="Harmless" key="brand" />
+                  </li>
+                  <li>
+                    <label for="jacksons-jackets">Jackson's Jackets</label>
+                    <input type="checkbox" id="jacksons-jackets" name="Jackson's Jackets" key="brand" />
+                  </li>
+                  <li>
+                    <label for="mountain-gear">Mountain Gear</label>
+                    <input type="checkbox" id="mountain-gear" name="Mountain Gear" key="brand" />
+                  </li>
+                  <li>
+                    <label for="peter-storm">Peter Storm</label>
+                    <input type="checkbox" id="peter-storm" name="Peter Storm" key="brand" />
+                  </li>
+                  <li>
+                    <label for="snow-storm">Snow Storm</label>
+                    <input type="checkbox" id="snow-storm" name="Snow Storm" key="brand" />
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <ul class="collapsed-section filter-container">
+                  <li class="filter-items"><h3>Size</h3></li>
+                  <li>
+                    <label for="s">Small</label>
+                    <input type="checkbox" id="s" name="Small" key="sizes" />
+                  </li>
+                  <li>
+                    <label for="m">Medium</label>
+                    <input type="checkbox" id="m" name="Medium" key="sizes" />
+                  </li>
+                  <li>
+                    <label for="l">Large</label>
+                    <input type="checkbox" id="l" name="Large" key="sizes" />
+                  </li>
+                  <li>
+                    <label for="xl">X Large</label>
+                    <input type="checkbox" id="xl" name="X-Large" key="sizes" />
+                  </li>
+                  <li>
+                    <label for="xxl">XX Large</label>
+                    <input type="checkbox" id="xxl" name="XX-Large" key="sizes" />
+                  </li>
+                  <li>
+                    <label for="3xl">3X Large</label>
+                    <input type="checkbox" id="3xl" name="3X-Large" key="sizes" />
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <ul class="collapsed-section filter-container">
+                  <li class="filter-items"><h3>Colour</h3></li>
+                  <li>
+                    <label for="black">Black</label>
+                    <input type="checkbox" id="black" name="Black" key="colours" />
+                  </li>
+                  <li>
+                    <label for="blue">Blue</label>
+                    <input type="checkbox" id="blue" name="Blue" key="colours" />
+                  </li>
+                  <li>
+                    <label for="green">Green</label>
+                    <input type="checkbox" id="green" name="Green" key="colours" />
+                  </li>
+                  <li>
+                    <label for="grey">Grey</label>
+                    <input type="checkbox" id="grey" name="Grey" key="colours" />
+                  </li>
+                  <li>
+                    <label for="red">Red</label>
+                    <input type="checkbox" id="red" name="Red" key="colours" />
+                  </li>
+                  <li>
+                    <label for="yellow">Yellow</label>
+                    <input type="checkbox" id="yellow" name="Yellow" key="colours" />
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <ul class="collapsed-section filter-container">
+                  <li class="filter-items"><h3>Price</h3></li>
+                  <li><label>Select an additional option for the prices between them.</label></li>
+                  <li>
+                    <label for="39-less">£39.99 or less</label>
+                    <input type="checkbox" id="39-less" name="[0, 39.99]" key="price" />
+                  </li>
+                  <li>
+                    <label for="40-59">£40.00-£59.99</label>
+                    <input type="checkbox" id="40-59" name="[40, 59.99]" key="price" />
+                  </li>
+                  <li>
+                    <label for="60-79">£60.00-£79.99</label>
+                    <input type="checkbox" id="60-79" name="[60, 79.99]" key="price" />
+                  </li>
+                  <li>
+                    <label for="80-99">£80.00-£99.99</label>
+                    <input type="checkbox" id="80-99" name="[80, 99.99]" key="price" />
+                  </li>
+                  <li>
+                    <label for="100-more">£100.00 or more</label>
+                    <input type="checkbox" id="100-more" name="[100, 1000]" key="price" />
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <label class="filter-label close-filter" for="filter-drop-down">close</label>
+          </div>
+          <div class="products-page-grid" id="main-content">
+            <!-- Add back once js is created.
+            <div class="sort-products">
+              <label for="sort">Sort By:</label>
+              <select name="sort" id="sort">
+                <option value="best-seller">Best Sellers</option>
+                <option value="price-high-low">Price; High-Low</option>
+                <option value="price-low-high">Price; Low-High</option>
+                <option value="Newest">Newest</option>
+              </select>
+            </div> -->
+
+            <!-- Example of product item code.
+            <div class="product-item">
+              <a href="product.html">
+                <div class="overlay"></div>
+                <img src="images/products/red_jacket_small.jpg" alt="Red Jacket" />
+              </a>
+              <h3>Men's Zip Down Waterproof II Jacket</h3>
+              <div>
+                <p>Peter Storm</p>
+                <p>Red, Black, Yellow</p>
+                <p>£50.00</p>
+              </div>
+            </div> -->
+          </div>
+        </div>
+        <!-- <div class="centre-page-list">
+          <a href="#heading" class="change-list-page-pre">Previous</a>
+          <a href="#heading" class="change-list-page current-list-page">1</a>
+          <a href="#heading" class="change-list-page change-page-span">2</a>
+          <a href="#heading" class="change-list-page">23</a>
+          <a href="#heading" class="change-list-page-next">Next</a>
+        </div> -->
+      </section>
+    </main>
+    <footer>
+      <section class="foot-top">
+        <div class="two-column-grid page-wrapper">
+          <div class="sign-up-container">
+            <form class="sign-up">
+              <label for="signup-email">Sign Up To Our Newsletter</label>
+              <div class="input-container">
+                <input type="email" name="signup-email" id="signup-email" class="email-input" />
+                <input type="submit" value="Submit" class="submit-button" />
+              </div>
+            </form>
+          </div>
+          <div>
+            <h2>Connect With Us On Social Media</h2>
+            <div class="footer-icon-flexbox">
+              <img src="images/interface_and_logo/icons/Icon-awesome-facebook.png" alt="Facebook Icon" />
+              <img src="images/interface_and_logo/icons/Icon-awesome-twitter.png" alt="Twitter Icon" />
+              <img src="images/interface_and_logo/icons/Icon-awesome-instagram.png" alt="Instagram Icon" />
+              <img src="images/interface_and_logo/icons/Icon-awesome-youtube.png" alt="Youtube Icon" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="foot-bot">
+        <div class="two-column-grid page-wrapper">
+          <div>
+            <a href="about.html" class="">About Us</a>
+            <a href="contact.html" class="">Contact Us</a>
+          </div>
+          <div class="payment-icons">
+            <h2>Accepted Payments</h2>
+            <div class="footer-icon-flexbox">
+              <img src="images/interface_and_logo/icons/mastercard_logo_1x.png" alt="Mastercard Logo" />
+              <img src="images/interface_and_logo/icons/maestro_logo_1x.png" alt="Maestro Logo" />
+              <img src="images/interface_and_logo/icons/visa_logo_1x.png" alt="Visa Logo" />
+              <img src="images/interface_and_logo/icons/american_express_logo_1x.png" alt="American Express Logo" />
+              <img src="images/interface_and_logo/icons/pay_pal_logo.png" alt="Pay Pal Logo" />
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <span>Rainydays Copyright &copy; 2021</span>
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>

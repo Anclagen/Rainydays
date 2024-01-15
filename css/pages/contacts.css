@@ -1,0 +1,53 @@
+section.contact-details,
+section.contact-form {
+  margin-bottom: 50px;
+}
+
+.contact-form > * {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form p,
+.contact-form a {
+  display: inline;
+}
+
+textarea {
+  height: 85%;
+  min-height: 150px;
+  resize: none;
+}
+
+label {
+  font-size: 1rem;
+  margin: 20px 0 5px 0;
+}
+
+input {
+  margin-bottom: 20px;
+}
+
+section.contact-form input.cta {
+  margin: 20px 0;
+}
+
+.error {
+  min-height: 1rem;
+}
+
+#fullname {
+  max-width: 15rem;
+}
+
+#email {
+  max-width: 25rem;
+}
+
+#subject {
+  max-width: 8rem;
+}
+
+#order-number {
+  max-width: 7.75rem;
+}

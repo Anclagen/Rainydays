@@ -1,0 +1,979 @@
+/* colors */
+:root {
+  --dark-blue: #001e44;
+  --light-blue: #1d5ecc;
+  --cta-orange: #db7c00;
+  --cta-green: #1bc2a3;
+  --grey: #f0f0f0;
+}
+
+/*
+Font Sizes:
+10px = 0.625rem
+12px = 0.75rem      captions sorting
+14px = 0.875rem 
+16px = 1rem         (base) regular (400) - body, medium (500) - subhead 2
+18px = 1.125rem     medium (500)- buttons + subhead 1
+20px = 1.25rem      medium (500)- page header
+24px = 1.5rem       medium (500)- home pic caption text
+30px = 1.875rem
+32px = 2rem         regular (400) - picture headers
+
+*/
+
+body {
+  margin: auto;
+  padding-top: 0px;
+  font-family: roboto;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  /* overflow-x: hidden; /*prevent drop down menu overflow*/
+}
+
+/*messing around with animations*/
+main {
+  animation: fadein 1.5s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*General styles*/
+
+header {
+  background: var(--dark-blue);
+  z-index: 1; /*prevent banner link area covering parts of header*/
+}
+
+header a,
+footer a,
+header,
+footer {
+  color: #fff;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-top: 10px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.125rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+footer h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+a {
+  cursor: pointer;
+  color: #001e44;
+}
+
+header a,
+footer a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+div.page-bread-crumbs {
+  margin: 10px;
+}
+
+/*standard wrappers for content (careful where adding to nav bar and footer)*/
+.page-wrapper,
+.page-wrapper-medium,
+.page-wrapper-small,
+.page-wrapper-xsmall {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0px auto;
+}
+
+.page-wrapper-medium {
+  max-width: 800px;
+}
+
+.page-wrapper-small {
+  max-width: 600px;
+}
+
+.page-wrapper-xsmall {
+  max-width: 350px;
+}
+
+/*Hidden for small screens and hamburgers*/
+.desktop-nav-account,
+.desktop-nav,
+.desktop-logo,
+.main-nav-contact {
+  display: none;
+}
+
+/*visually hidden so screen readers tab on them on smaller screens*/
+#search-drop-down,
+#menu-drop-down {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  margin: -1px;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+#skip a {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+#skip a:focus {
+  position: static;
+  width: auto;
+  height: auto;
+}
+
+/*button colours and styles*/
+.cta {
+  padding: 10px 15px;
+  font-size: 1.125rem;
+  font-weight: 500;
+  background: var(--cta-orange);
+  border-radius: 5px;
+  text-shadow: 2px 2px 2px var(--dark-blue);
+  color: white;
+  text-decoration: none;
+  border-color: var(--cta-orange);
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.cta-green {
+  background-color: var(--cta-green);
+  border-color: #001e44;
+}
+
+.button-container a,
+.button-container input {
+  display: block;
+  width: 90%;
+  text-align: center;
+  margin: 40px auto;
+}
+
+/*general input, form and button styles*/
+label {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+#quantity,
+.login-container input,
+footer input,
+nav input,
+section.contact-form textarea,
+section.contact-form input {
+  display: inline;
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 500;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+footer input,
+nav input {
+  padding: 10px;
+  border: none;
+}
+
+.error {
+  color: red;
+  font-size: 0.8rem;
+}
+
+.success {
+  background-color: green;
+  color: white;
+  border-radius: 5px;
+}
+
+.success p {
+  text-align: center;
+  margin: 10px 10px;
+}
+
+/*because safari is annoying!*/
+header input,
+footer input,
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  margin: 0;
+  opacity: 1; /*stops faded appearance*/
+}
+
+input[type="checkbox"],
+input[type="submit"],
+input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  opacity: 1;
+}
+
+/*gotta stop those number spinners*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#order-number,/*refused to change??*/
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.input-container {
+  display: block;
+  position: relative;
+  width: 90%;
+  height: 100%;
+  background-color: white;
+  box-sizing: border-box;
+  border: none;
+  padding: 0;
+  border-radius: 5px;
+  height: 41px;
+  margin: 0;
+}
+
+.email-input,
+.search-bar {
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  padding: 0px 0px 0px 5px;
+}
+
+/*radio inputs on cart, and payment plus check box on filters*/
+input[type="checkbox"],
+input[type="radio"] {
+  position: relative; /*make container to position after on top*/
+  width: 0;
+  height: 0;
+  margin-right: 20px;
+}
+
+input[type="checkbox"]::after,
+input[type="radio"]::after {
+  position: absolute;
+  top: -5px;
+  left: -15px;
+  display: inline-block;
+  content: "";
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: var(--grey);
+  border: 1px solid black;
+  margin-right: 10px;
+}
+
+input[type="checkbox"]:checked::after,
+input[type="radio"]:checked:after {
+  position: absolute;
+  top: -5px;
+  left: -15px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  content: "";
+  background: var(--cta-orange);
+  border: black;
+  border: 1px solid black;
+  display: inline-block;
+  box-shadow: inset 0 0 0 2px white;
+  margin-right: 10px;
+  transition: 500ms;
+  transform-origin: left;
+}
+
+input[type="checkbox"]::after,
+input[type="checkbox"]:checked::after {
+  top: 0px;
+  left: 0px;
+  border-radius: 0;
+  width: 18px;
+  height: 18px;
+}
+
+select {
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px 5px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/*adjust search bar for drop down to avoid hitting edges of screen */
+ul search {
+  margin: 0 20px;
+}
+
+.search-drop {
+  margin: 0 50px 0 auto;
+}
+
+/*input buttons*/
+.submit-button,
+.search-button {
+  position: absolute;
+  color: #fff;
+  background: var(--cta-orange);
+  cursor: pointer;
+  border-radius: 0px 5px 5px 0px;
+  font-weight: 500;
+  text-shadow: 2px 2px 2px var(--dark-blue);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.search-button,
+.submit-button {
+  height: 100%; /*needed to fix firefox 1px difference!*/
+  padding: 0 20px;
+  width: auto;
+}
+
+/* general hover interactions*/
+
+/*button hover*/
+.submit-button:hover,
+.search-button:hover,
+.cta:hover {
+  transition: 700ms;
+  color: var(--cta-orange);
+  background-color: #fff;
+  outline: 2px solid var(--cta-orange);
+  text-shadow: none;
+}
+
+.cta-green:hover {
+  transition: 700ms;
+  color: var(--cta-green);
+  background-color: #fff;
+  outline: 2px solid var(--cta-green);
+  text-shadow: none;
+}
+
+/*nav button*/
+#current,
+.main-nav-menu li:hover {
+  transition: 600ms;
+  background: var(--dark-blue);
+}
+
+/*image hover overlay*/
+.overlay-container {
+  margin-top: 25px;
+}
+
+.product-item a,
+.overlay-container {
+  position: relative;
+  width: 100%;
+}
+
+.product-item .overlay,
+.overlay-container .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.product-item a:hover .overlay,
+.overlay-container:hover .overlay {
+  display: block;
+  background: rgba(0, 30, 68, 0.3);
+  border-radius: 5px 5px 0 0;
+}
+
+.page-bread-crumbs a:hover {
+  text-decoration: underline;
+}
+
+/*tool tip avoid on anything not position left or that has variable positioning*/
+
+* [data-tool-tip] {
+  position: relative;
+  cursor: pointer;
+  font-size: 0.8rem;
+  background-color: var(--grey);
+  padding: 1px 5px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+* [data-tool-tip] {
+  position: relative;
+}
+
+* [data-tool-tip]::after {
+  content: attr(data-tool-tip);
+  position: absolute;
+  background: var(--grey);
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  bottom: 100%;
+  left: 100%;
+  width: 120px;
+  display: none;
+}
+
+* [data-tool-tip]:hover::after {
+  display: block;
+}
+
+/*-------  Navigation --------*/
+
+nav ul {
+  margin: 0;
+  padding-left: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav li {
+  display: block;
+  float: left;
+  padding: 1rem;
+  text-decoration: none;
+}
+
+nav ul li ul {
+  background: var(--light-blue);
+  display: none;
+  position: absolute;
+  margin-top: 0px;
+  left: 0px;
+}
+
+nav ul li.main-nav-cart ul {
+  display: inline-flex;
+  position: relative;
+  background: none;
+}
+
+nav ul li ul li {
+  background: var(--light-blue);
+  position: relative;
+  z-index: 1;
+  /* put menu drop on top of page content highest number on top when multiples items use it, need pos fix/rel/absolute*/
+}
+
+nav ul li.main-nav-cart ul li {
+  background: none;
+}
+
+/*show the check box menus*/
+#search-drop-down:checked ~ ul,
+#menu-drop-down:checked ~ ul {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.hamburger li,
+.search li {
+  box-shadow: -1px 10px 5px var(--dark-blue);
+}
+
+.logo_mobile {
+  padding-top: 10px;
+  min-width: 80px;
+  max-width: 180px;
+  width: 100%;
+}
+
+.navigation-icons {
+  min-width: 25px;
+  max-width: 50px;
+  width: 100%;
+  padding-top: 20px;
+  margin-bottom: 15px; /*to push drop downs down*/
+}
+
+/*-------  Footer styling  --------*/
+
+footer {
+  margin-top: 20px;
+}
+
+footer img {
+  padding: 5px;
+}
+
+.payment-icons img {
+  max-width: 80px;
+}
+
+.foot-top {
+  background: var(--light-blue);
+  padding: 20px 0px;
+}
+
+.foot-bot {
+  background: var(--dark-blue);
+  padding: 20px 0px;
+}
+
+footer input {
+  border: none;
+  width: 80%;
+}
+
+div.sign-up-container {
+  margin-top: 9px;
+}
+
+footer div.input-container {
+  margin-top: 20px;
+}
+
+footer label {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+footer form {
+  padding: 10px 0;
+}
+
+.footer-icon-flexbox {
+  display: flex;
+  justify-content: space-between;
+  max-width: 500px;
+}
+
+section.foot-bot div a {
+  display: inline-block;
+  margin: 15px 20px 30px 0px;
+}
+
+footer .footer-copyright {
+  text-align: center;
+  padding: 30px 0px;
+}
+
+.footer-copyright span {
+  font-size: 0.9rem;
+}
+
+/*Product item displays for home/products/product page*/
+.product-item {
+  background-color: var(--grey);
+  display: flex;
+  flex-direction: column;
+  flex: start;
+  /*border: 2px solid var(--dark-blue);*/
+  height: 100%;
+  border-radius: 5px;
+  box-shadow: 3px 5px 8px var(--dark-blue);
+}
+
+.product-item div:last-child {
+  margin-top: auto;
+}
+
+.product-image-container img,
+.product-item img {
+  width: 100%;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.product-item p,
+.product-item h3 {
+  margin: 5px 5px;
+  text-transform: capitalize;
+}
+
+.product-item p {
+  padding: 5px 0px;
+}
+
+.product-list-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-auto-rows: 1fr;
+  row-gap: 25px;
+  margin-bottom: 50px;
+}
+
+/* shared colours for prices */
+
+.sale-price {
+  font-weight: bold;
+}
+
+.previous-price {
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+}
+
+.save-price {
+  display: inline-block;
+  background: var(--cta-orange);
+  padding: 0 5px;
+  color: black;
+  border-radius: 5px;
+  min-width: 94px;
+  text-align: center;
+}
+
+/* light box pop-up*/
+
+.lightbox-background {
+  position: fixed;
+  z-index: 1000;
+  padding: 10px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 30, 68, 0.7);
+}
+
+.lightbox-content {
+  margin: auto;
+  padding: 20px;
+  width: 280px;
+  background-color: var(--light-blue);
+  color: white;
+  border: 2px solid white;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.lightbox-content::-webkit-scrollbar {
+  display: none;
+}
+
+.lightbox-image {
+  display: block;
+  margin: auto;
+  width: 80%;
+}
+
+.lightbox-button-container {
+  display: inline-flex;
+  width: 100%;
+}
+
+.lightbox-button-container button {
+  width: 120px;
+  margin: 0 auto;
+}
+
+/* js toggles filter settings visibility on click*/
+
+.collapsed-section-product,
+.collapsed-section {
+  overflow: hidden;
+  height: 40px;
+}
+
+.collapsed-section-product {
+  height: 60px;
+}
+
+.product-section-heading,
+.filter-items {
+  position: relative;
+  cursor: pointer;
+}
+
+.product-section-heading {
+  width: fit-content;
+}
+
+.product-section-heading::after,
+.filter-items::after {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  content: "";
+  rotate: 90deg;
+  border-top: 10px solid transparent;
+  border-left: 10px solid white;
+  border-bottom: 10px solid transparent;
+}
+
+.product-section-heading::after {
+  top: 3px;
+  right: -20px;
+  border-top: 8px solid transparent;
+  border-left: 8px solid black;
+  border-bottom: 8px solid transparent;
+}
+
+.collapsed-section-product .product-section-heading::after,
+.collapsed-section .filter-items::after {
+  rotate: 0deg;
+}
+
+/* Loader styles*/
+.loader{
+  padding: 30px;
+  grid-column: -1/1;
+  position: relative;
+  text-align: center;
+}
+
+.inner-loader,
+.outer-loader {
+  display: inline-block;
+  border: 16px solid var(--grey);
+  border-top: 16px solid var(--light-blue);
+  border-bottom: 16px solid var(--light-blue);
+  border-radius: 100%;
+  width: 120px;
+  height: 120px;
+  animation: inner-spin 2s linear infinite;
+}
+
+.inner-loader {
+  border: 12px solid var(--grey);
+  border-top: 12px solid var(--light-blue);
+  border-bottom: 12px solid var(--light-blue);
+  width: 60px;
+  height: 60px;
+  animation: outer-spin 2s linear infinite;
+  margin-bottom: 33px;
+  margin-left: -120px;
+}
+
+@keyframes inner-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes outer-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+} 
+
+/*allows down to around 300px width smallest screen on data shows 320px*/
+@media only screen and (max-width: 380px) {
+  nav li {
+    padding: 0.6rem;
+  }
+
+  .footer-icon-flexbox {
+    flex-wrap: wrap;
+  }
+}
+
+/*tablet styles*/
+
+@media only screen and (min-width: 500px) {
+  .product-list-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 25px;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  /*2 column grid for promo images and footer */
+  .two-column-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+  }
+
+  /* added column to grid for product section/product page*/
+}
+
+@media only screen and (min-width: 850px) {
+  /*Hiding small images, quick links section, and un-need mobile elements */
+  .mobile-nav,
+  .hide-quick-links,
+  .mobile-screen {
+    display: none;
+  }
+
+  /* add flex cleared item to normal flow navbar!*/
+  .flex-clear {
+    position: relative;
+  }
+
+  /*prevents open drop-down affecting desktop layout*/
+  #search-drop-down:checked ~ ul,
+  #menu-drop-down:checked ~ ul {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+  }
+
+  /* 4 column product grid*/
+  .product-list-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /*The Nav bar re-construction to grid, needs more work to shrink it a bit*/
+
+  header {
+    background: linear-gradient(var(--dark-blue), var(--dark-blue) 114px, var(--light-blue) 114px, var(--light-blue));
+  }
+
+  .hamburger li,
+  .search li {
+    box-shadow: none;
+  }
+
+  .main-nav-container {
+    display: grid;
+    grid-template-areas:
+      "logo search cart account"
+      "logo nav nav nav";
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto auto;
+    align-items: center;
+    width: 100%;
+  }
+
+  .main-nav-logo {
+    grid-area: logo;
+  }
+  .main-nav-search {
+    grid-area: search;
+  }
+  .main-nav-cart {
+    grid-area: cart;
+  }
+  .main-nav-account {
+    grid-area: account;
+  }
+  .main-nav-menu {
+    grid-area: nav;
+  }
+
+  .hamburger li {
+    width: auto;
+    margin: 0;
+  }
+
+  #menu-drop-down ~ ul {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+  }
+
+  /*pushes the second to last and inturn last li item to the right*/
+  li:nth-last-of-type(2) {
+    margin-left: auto;
+  }
+
+  .search li {
+    display: inline;
+    margin: 0;
+    width: 80%;
+  }
+
+  .main-nav-menu a {
+    display: block;
+    padding: 16px;
+  }
+  .main-nav-menu li,
+  .main-nav-menu {
+    padding: 0;
+  }
+
+  #search-drop-down ~ ul {
+    display: block;
+    width: 100%;
+  }
+
+  .search-drop {
+    margin: 0;
+  }
+
+  .desktop-logo {
+    display: block;
+    max-width: 200px;
+    padding-top: 2px;
+  }
+
+  .navigation-icons {
+    max-width: 30px;
+    padding-top: 0px;
+    padding-left: 15px;
+    margin-bottom: 0px; /*to push drop downs, not need at desktop*/
+  }
+
+  .desktop-nav-account,
+  .desktop-nav {
+    display: inline;
+  }
+
+  nav ul li ul,
+  nav ul li ul li {
+    background: none;
+  }
+
+  /*fix floats and absolutes from drop downs*/
+  nav li {
+    float: none;
+    position: relative;
+  }
+
+  nav ul li.main-nav-search ul,
+  nav ul li.main-nav-menu ul {
+    display: inline-flex;
+    position: relative;
+    background: none;
+  }
+}
